@@ -18,8 +18,6 @@ public class TC_DWS_003_Test extends BaseClass{
 		boolean msgStatus = homePage.getConfirmMessage().isDisplayed();
 		Assert.assertEquals(msgStatus, true,"product failed to add");
 		test.log(Status.PASS, "Product has been added to cart");
-		welcomePage.getShoppingCartLink().click();
-		
 		wait.until(ExpectedConditions.invisibilityOf(homePage.getConfirmMessage()));
 	}
 }
